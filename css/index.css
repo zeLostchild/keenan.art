@@ -1,6 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+body {
+  font-family: DotGothic16;
+  letter-spacing: 5px;
+  font-size: 15px; }
+
 #center {
   height: 100vh;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.bga {
+  height: 100vh;
+  width: 100%;
+  visibility: hidden;
+  position: fixed;
+  z-index: -1; }
+
+#box {
+  width: 500px;
+  padding: 50px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #66CCFF; }
+
+.menu {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center; }
+
+.item {
+  padding: 20px;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+#design {
+  width: 80px; }
+
+#art {
+  width: 40px; }
+
+#music {
+  width: 60px; }
+
+#misc {
+  width: 60px; }

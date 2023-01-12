@@ -3,15 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <title>Keenan McHale</title>
-	<!-- gridlex css file consilidated normalize.css into end-->
-<link href="css/gridlex.css" rel="stylesheet" type="text/css">
-	<!--index css, which is coming from ~/sass -->
+<!-- normalizes, makes it easier to design -->
+<link href="css/normalize.css" rel="stylesheet" type="text/css">
+<!--index css, which is coming from /sass >> /css through dreamweaver -->
 <link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<!-- For the background animation-->
+	<div class="bga" id="design_bg" style="background-image: url('img/design.gif');background-size: 90px;"></div>
+	<div class="bga" id="art_bg" style="background-image: url('img/art.gif');background-size: 120px;"></div>
+	<div class="bga" id="music_bg" style="background-image: url('img/music.gif');background-size: 108px;"></div>
+	<div class="bga" id="misc_bg" style="background-image: url('img/misc.gif');background-size: 180px;"></div>
+	<!-- Blue background, base background, visible when animation is not -->
+	<div class="bga" style="background:#66CCFF;visibility:visible;z-index:-2"></div>
+	<!-- Box for items such ash menu, greeting, etc -->
 	<div id="center">
-		<img src="img/logo.svg" alt="" style="max-width:200px"/>
+		<div id="box">
+			<!-- logo -->
+			<img src="img/logo.svg" alt="KM Logo" style="width:200px"/>
+			<!-- Greetings -->
+			<div style="padding-top:25px;color:#fff">いらしゃいませ・Welcome Friend</div>
+			<!-- Menu -->
+			<div class="menu">
+				<a href="design.html"><div class="item" id="design">Design</div></a>
+				<a href="art.html"><div class="item" id="art">Art</div></a>
+				<a href="music.html"><div class="item" id="music">Music</div></a>
+				<a href="misc.html"><div class="item" id="misc">Misc.</div></a>
+			</div>
+		</div>
 	</div>
 </body>
+	<script>
+		// For the menu, 
+		//mouseover changes text menu to japanese and sets animated background, .gif file. 
+		//mouseout reverts back to normal
+		
+		//calls the function when onEvent occurs
+		document.getElementById("design").onmouseover = function(){designOn()};
+		document.getElementById("design").onmouseout = function(){designOff()};
+		document.getElementById("art").onmouseover = function(){artOn()};
+		document.getElementById("art").onmouseout = function(){artOff()};
+		document.getElementById("music").onmouseover = function(){musicOn()};
+		document.getElementById("music").onmouseout = function(){musicOff()};
+		document.getElementById("misc").onmouseover = function(){miscOn()};
+		document.getElementById("misc").onmouseout = function(){miscOff()};
+		
+		//function changes based on status, designOn/designOff is for #design, artOn/artOff is for #art, etc..
+					function designOn(){
+				document.getElementById("design").innerHTML= "デサイン";
+				document.getElementById("design_bg").style.visibility = "visible"
+				};
+					function designOff(){
+				document.getElementById("design").innerHTML= "Design";
+				document.getElementById("design_bg").style.visibility = "hidden"
+				};
+					function artOn(){
+				document.getElementById("art").innerHTML= "芸術";
+				document.getElementById("art_bg").style.visibility = "visible"
+				};
+					function artOff(){
+				document.getElementById("art").innerHTML= "Art";
+				document.getElementById("art_bg").style.visibility = "hidden"
+				};
+					function musicOn(){
+				document.getElementById("music").innerHTML= "音楽";
+				document.getElementById("music_bg").style.visibility = "visible"
+				};
+					function musicOff(){
+				document.getElementById("music").innerHTML= "Music";
+				document.getElementById("music_bg").style.visibility = "hidden"
+				};
+					function miscOn(){
+				document.getElementById("misc").innerHTML= "雑多";
+				document.getElementById("misc_bg").style.visibility = "visible"
+				};
+					function miscOff(){
+				document.getElementById("misc").innerHTML= "Misc.";
+				document.getElementById("misc_bg").style.visibility = "hidden"
+				};
+
+</script>
 </html>
